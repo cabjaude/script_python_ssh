@@ -1,6 +1,4 @@
 FROM ubuntu:20.04
-RUN apt-get update && apt-get install -y python3.9
+RUN apt-get update -y &&  apt-get install python3 -y
 COPY script_ssh_python.py .
-RUN python3 script_ssh_python.py
-COPY . .
-CMD ["python]
+CMD python3 script_ssh_python.py
