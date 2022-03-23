@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: cabjaude12/python:v2.1
+          tags: cabjaude12/python:v2.2
