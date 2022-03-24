@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'hostname'
+        sh 'python3 --version'
       }
     }
   }
