@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'python3 --version'
+        sh '/home/python/script_ssh_python.py'
       }
     }
   }
