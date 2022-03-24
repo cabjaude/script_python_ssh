@@ -1,11 +1,12 @@
 pipeline {
-  agent {
-    docker { image 'python:3-slim' }
-  }
+  agent { dockerfile true }
   stages {
     stage('Test') {
       steps {
-        sh '/home/python/script_ssh_python.py'
+        sh '''
+        /home/python/script_ssh_python.py
+
+        '''
       }
     }
   }
