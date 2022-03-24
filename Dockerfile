@@ -1,4 +1,7 @@
-FROM ubuntu:20.04
-RUN apt-get update -y &&  apt-get install python3 -y
-RUN apt-get install -y git
-COPY script_ssh_python.py ./
+FROM python:3-slim
+RUN apt update
+RUN pip install netmiko
+ARG path="/home/python/teste_conexao.py"
+COPY teste_conexao.py $path/
+RUN chmod +x $path/teste_conexao.py
+WORKDIR $path
