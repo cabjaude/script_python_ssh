@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''
-        /home/python/script_ssh_python.py
-
-        '''
+        sh '/home/python/script_ssh_python.py'        
       }
     }
   }
