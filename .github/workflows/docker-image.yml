@@ -3,8 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'master'
-      - 'scriptssh'
+      - 'master'      
 
 jobs:
   docker:
