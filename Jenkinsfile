@@ -1,7 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+                def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
             agent {
                 docker {
                     image 'gradle:6.7-jdk11'
