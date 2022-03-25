@@ -1,14 +1,12 @@
 pipeline {
-  agent { dockerfile true }
-  stages {
-     stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    agent {
+        docker { image 'node:16.13.1-alpine' }
     }
-    stage('Test') {
-      steps {
-        sh 'python3 /home/python/script_ssh_python.py'        
-      }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-  }
 }
